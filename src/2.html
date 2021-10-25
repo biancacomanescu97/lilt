@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GAME</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--CSS-->
+  <!--IMPORTED LIBRARIES--> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+  <!--RESOURCES--> 
+  <link rel="stylesheet" href="resources/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="game-background">
+            <div class="row-game">
+                <div class="column-game">
+                    <div id = "camera">
+                        <video  id = "camera-video" style = 'display:none'></video>
+                        <canvas id = "camera-output" /> 
+                        <!-- this is camera-->
+                    </div>
+                </div>
+                <div class="column-game">
+                    <div id = "model">
+                        <video  id = "model-video" src = "resources/videos/2.mp4" style = 'display:none'></video>
+                        <canvas id = "model-output"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "game-button">
+                <button class="buttons" onclick="playVid()" type="button">Play video</button>
+                <button class="buttons" onclick="pauseVid()" type="button">Pause video</button><br> 
+            </div>
+        </div>
+        
+        <!--FOOTER-->
+        <div class = "footer">
+            <div class = "row-footer">
+                <div class = "column-footer">
+                    <div class = "footer-left">Go with the flow of TensorFlow</div>
+                </div>
+                <div class = "column-footer">
+                <div class = "footer-right">Strike that pose with PoseNet detection</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--JAVASCRIPT-->
+    <!--IMPORTED LIBRARIES-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--TENSORFLOW & POSENET-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <!--RESOURCES-->
+    <script src = "resources/js/setup.js"></script>
+    <script src = "resources/js/draw.js"></script>
+    <script src = "resources/js/detection.js"></script>
+    <script src = "resources/js/utils.js"></script>
+    <script src = "resources/js/comparison.js"></script> 
+</html>
